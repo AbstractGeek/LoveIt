@@ -9,7 +9,7 @@
 
       img {
         display: inline-block;
-        width: 8rem;
+        width: 16rem;
         height: auto;
         margin: 0 auto;
         @include border-radius(100%);
@@ -18,36 +18,44 @@
 
         &:hover {
           position: relative;
-          @include transform(translateY(-.75rem));
+          @include transform(translateY(-1rem));
         }
       }
     }
 
     .home-title {
-      font-size: 1.25rem;
+      font-size: 2rem;
       font-weight: bold;
       margin: 0;
       padding: .5rem;
     }
-
+    
     .home-subtitle {
+      font-size: 1.25rem;
+      font-weight: normal;
+      margin: 0;
+      padding: 1rem;
+    }
+    
+    .home-description {
       font-size: 1rem;
       font-weight: normal;
       margin: 0;
-      padding: .5rem;
+      padding: 1rem;    
     }
 
     .links {
-      padding: .5rem;
+      padding: 1rem;
       font-size: 1.5rem;
 
       a * {
         vertical-align: text-bottom;
+        padding: 0.5rem
       }
 
       img {
         height: 1.5rem;
-        padding: 0 .25rem;
+        padding: 0.5 .25rem;
       }
     }
 
@@ -70,10 +78,20 @@
   .home-profile {
     @include transform(translateY(0));
     padding-top: 2rem;
+    padding-bottom: 2em;
   }
 
   .home-avatar img {
-    width: 6rem;
+    width: 16rem;
+  }
+  
+  .post-title {
+  padding-top: 1rem;
+  border-top: 1px dashed $global-border-color;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  padding-top: 2rem;
   }
 
   .summary {

@@ -37,6 +37,13 @@
                 {{- . -}}
             {{- end -}}
         </h2>
+        
+    {{- with $profile.description -}}
+        <h3 class="home-description">
+            {{- . | safeHTML -}}
+        </h3>
+    {{- end -}}
+        
     {{- end -}}
 
     {{- if $profile.social -}}

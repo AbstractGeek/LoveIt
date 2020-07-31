@@ -20,6 +20,11 @@
 
         {{- /* Posts */ -}}
         {{- if ne $posts.enable false | and .Site.RegularPages -}}
+            {{- with $posts.title -}}
+                <h1 class="post-title">
+                    {{- . | safeHTML -}}
+                </h1>
+            {{- end -}}        
             {{- /* Paginate */ -}}
             {{- $pages := where .Site.RegularPages "Type" "posts" -}}
             {{- if .Site.Params.page.hiddenFromHomePage -}}
