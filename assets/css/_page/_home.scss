@@ -87,11 +87,15 @@
   
   .post-title {
   padding-top: 1rem;
-  border-top: 1px dashed $global-border-color;
   font-size: 2rem;
   font-weight: bold;
   margin: 0;
   padding-top: 2rem;
+  
+    border-top: 1px dashed $global-font-color;
+    [theme=dark] & {
+      border-top: 1px dashed $global-font-color-dark;
+    }
   }
 
   .summary {
